@@ -66,6 +66,12 @@ public class PriorValueDecoder {
 				prev_frame[j] = symbol;
 			}
 		}
+		
+		/*for (int i=0; i<num_symbols; i++) {
+			int sym = decoder.decode(model, bit_source);
+			fos.write(sym);
+			model.addToCount(sym);
+		}*/
 
 		System.out.println("Done.");
 		fos.flush();

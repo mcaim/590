@@ -64,6 +64,19 @@ public class PriorValueEncoder {
 			}
 		}
 		
+		/*// Use model 0 as initial model.
+		FreqCountIntegerSymbolModel model = models[0];
+
+		for (int i=0; i<num_symbols; i++) {
+			int next_symbol = fis.read();
+			encoder.encode(next_symbol, model, bit_sink);
+			
+			// Update model used
+			model.addToCount(next_symbol);
+			
+			// Set up next model based on symbol just encoded
+			model = models[next_symbol];
+		}*/
 		fis.close();
 
 		// Finish off by emitting the middle pattern 
